@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MessageControler {
     @GetMapping("/hello")
-    public Message startMessage(@RequestParam(value="name", defaultValue="World") String name){
+    public Message startMessage(@RequestParam(value="name", defaultValue="World!") String name){
         return new Message(String.format("Hello %s!", name));
     }
     @GetMapping("/goodbye")
